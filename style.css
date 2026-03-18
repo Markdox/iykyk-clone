@@ -1,125 +1,154 @@
-/* --- RESET E BASI --- */
-* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #121212; /* Tema Dark profondo */
-    color: #FFFFFF;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    overflow: hidden; /* Evita lo scroll strano su mobile */
+/* --- RESET PROFESSIONALE --- */
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    -webkit-tap-highlight-color: transparent; /* Rimuove il rettangolo blu al tocco su iPhone */
 }
 
-/* --- CONTAINER PRINCIPALE (SIMULA UN TELEFONO) --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f0f0f;
+    color: #FFFFFF;
+    /* Evita lo scroll e gestisce l'altezza reale su mobile */
+    height: 100vh;
+    height: -webkit-fill-available; 
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .app-container {
     width: 100%;
-    max-width: 450px; /* Perfetto per simulare mobile su PC */
+    max-width: 500px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    background-color: #1a1a1a; /* Leggermente più chiaro */
+    /* Gestisce lo spazio per la tacca degli iPhone */
+    padding: env(safe-area-inset-top) 20px env(safe-area-inset-bottom) 20px;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0f0f0f 100%);
 }
 
 /* --- HEADER --- */
-header { margin-bottom: 20px; text-align: center; }
+header { padding: 20px 0 10px; }
 .status-bar {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    color: #888;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
+    letter-spacing: 4px;
+    color: #ff4757;
+    opacity: 0.8;
 }
 
 /* --- SEZIONE QUIZ --- */
-.quiz-section { flex: 1; display: flex; flex-direction: column; gap: 20px; justify-content: center; }
-
-/* --- LE CARDS (DOMANDA E RISPOSTE) --- */
-.card {
-    background: #252525;
-    border: 1px solid #333;
-    border-radius: 16px;
-    transition: all 0.3s ease;
+.quiz-section { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-evenly; /* Distribuisce bene domanda e risposte */
+    gap: 15px;
 }
 
 /* DOMANDA CARD */
 .domanda-card {
-    padding: 30px 20px;
+    background: #252525;
+    padding: 25px 20px;
     text-align: center;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
-    border: 2px solid #ff4757; /* Bordo rosso neon */
+    border-radius: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-#domanda { font-size: 1.6rem; font-weight: 700; line-height: 1.3; margin-bottom: 10px; color: #fff; text-shadow: 0 0 10px rgba(255, 71, 87, 0.5); }
-.sub-label { font-size: 0.7rem; color: #ff6b81; letter-spacing: 2px; }
+#domanda { 
+    font-size: clamp(1.2rem, 5vw, 1.6rem); /* Adatta la dimensione del testo allo schermo */
+    font-weight: 700; 
+    line-height: 1.3; 
+    margin-bottom: 12px; 
+}
+.sub-label { 
+    font-size: 0.65rem; 
+    color: #888; 
+    letter-spacing: 2px; 
+    display: block;
+}
 
-/* --- GRIGLIA RISPOSTE MOBILE-FIRST --- */
+/* --- GRIGLIA RISPOSTE MOBILE --- */
 .quiz-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 colonne su schermi medi */
-    gap: 15px;
+    grid-template-columns: 1fr; /* Una sola colonna per massima leggibilità su telefono */
+    gap: 12px;
 }
 
-/* Stile speciale per schermi MOLTO piccoli (verticale) */
-@media (max-width: 380px) {
-    .quiz-grid { grid-template-columns: 1fr; } /* 1 colonna sola */
-}
-
-/* RISPOSTA CARD (BOTTONE) */
 .answer-card {
+    background: #2a2a2a;
+    border: 1px solid #3d3d3d;
+    border-radius: 15px;
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: 12px 15px;
+    min-height: 65px; /* Tasti belli alti per i pollici */
     cursor: pointer;
-    width: 100%;
     text-align: left;
-    border: 1px solid #444;
-}
-.answer-card:hover, .answer-card:active {
-    background-color: #333;
-    border-color: #ff4757;
-    transform: translateY(-3px);
-}
-.answer-card.selected {
-    background-color: #ff4757;
-    border-color: #ff4757;
-    box-shadow: 0 0 15px rgba(255, 71, 87, 0.7);
+    outline: none;
 }
 
-.answer-card .letter {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #ff4757;
+/* Effetto al tocco (molto importante su mobile) */
+.answer-card:active {
     background: #333;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin-right: 15px;
-    flex-shrink: 0; /* Evita che si schiacci */
+    transform: scale(0.98);
 }
-.answer-card.selected .letter { background: #fff; color: #ff4757; }
-.answer-card p { font-size: 1rem; color: #ccc; flex: 1; margin: 0; }
-.answer-card.selected p { color: #fff; font-weight: 600; }
 
-/* --- FOOTER E BOTTONE --- */
-footer { margin-top: auto; padding-top: 20px; text-align: center; }
+.answer-card.selected {
+    border-color: #ff4757;
+    background: rgba(255, 71, 87, 0.1);
+}
+
+.letter {
+    background: #1a1a1a;
+    color: #ff4757;
+    font-weight: 700;
+    width: 35px;
+    height: 35px;
+    min-width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 15px;
+    border: 1px solid #333;
+}
+
+.answer-card.selected .letter {
+    background: #ff4757;
+    color: white;
+}
+
+.answer-card p {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    line-height: 1.2;
+}
+
+/* --- FOOTER FISSO IN BASSO --- */
+footer { 
+    padding: 20px 0; 
+}
+
 .main-btn {
-    background: linear-gradient(45deg, #ff4757, #ff6b81);
+    background: #ff4757;
     color: white;
     border: none;
-    padding: 18px 30px;
-    font-size: 1.2rem;
+    padding: 18px;
+    font-size: 1.1rem;
     font-weight: 700;
-    border-radius: 50px;
-    cursor: pointer;
+    border-radius: 15px;
     width: 100%;
-    box-shadow: 0 5px 20px rgba(255, 71, 87, 0.4);
-    transition: transform 0.1s;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+    text-transform: uppercase;
 }
-.main-btn:active { transform: scale(0.97); }
 
-.credits { font-size: 0.65rem; color: #555; margin-top: 15px; letter-spacing: 1px; }
+.credits { 
+    font-size: 0.6rem; 
+    color: #444; 
+    margin-top: 15px; 
+    text-align: center; 
+}
