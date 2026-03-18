@@ -129,26 +129,35 @@ header { padding: 20px 0 10px; }
 }
 
 /* --- FOOTER FISSO IN BASSO --- */
+/* --- FOOTER OTTIMIZZATO --- */
 footer { 
-    padding: 20px 0; 
+    padding: 10px 0 25px 0; /* Aumentato il padding sotto per i telefoni senza tasti fisici */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Spazio fisso tra pulsante e scritta */
 }
 
 .main-btn {
     background: #ff4757;
     color: white;
     border: none;
-    padding: 18px;
+    padding: 16px; /* Leggermente più basso per lasciare spazio */
     font-size: 1.1rem;
     font-weight: 700;
     border-radius: 15px;
     width: 100%;
     box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .credits { 
-    font-size: 0.6rem; 
-    color: #444; 
-    margin-top: 15px; 
+    font-size: 0.65rem; 
+    color: #666; /* Grigio un po' più chiaro per vederlo meglio sul nero */
     text-align: center; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    width: 100%;
+    padding-bottom: env(safe-area-inset-bottom); /* Fondamentale per iPhone post-X */
 }
