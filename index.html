@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>IYKYK Quiz Extreme</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <header>
+            <div class="status-bar">
+                <span id="labelCategoria">IYKYK</span>
+            </div>
+        </header>
+
+        <main class="quiz-section">
+            <div class="card domanda-card">
+                <p id="domanda">Caricamento...</p>
+                <span class="sub-label">RISPONDI SINCERAMENTE</span>
+            </div>
+
+            <div class="quiz-grid">
+                <button class="card answer-card" onclick="selezionaRisposta('A')">
+                    <span class="letter">A</span>
+                    <p id="ansA"></p>
+                </button>
+                <button class="card answer-card" onclick="selezionaRisposta('B')">
+                    <span class="letter">B</span>
+                    <p id="ansB"></p>
+                </button>
+                <button class="card answer-card" onclick="selezionaRisposta('C')">
+                    <span class="letter">C</span>
+                    <p id="ansC"></p>
+                </button>
+                <button class="card answer-card" onclick="selezionaRisposta('D')">
+                    <span class="letter">D</span>
+                    <p id="ansD"></p>
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <button id="nextBtn" class="main-btn">PROSSIMA DOMANDA</button>
+            <div class="credits">made by Marco and Gemini</div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
