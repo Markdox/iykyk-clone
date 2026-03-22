@@ -2,15 +2,46 @@
 // Ti rimetto solo un esempio qui per brevità, incolla tu il listone da 50.
 const domandeQuiz = [
     // --- 10 DOMANDE NORMALI (SITUAZIONI DI GRUPPO) ---
-    { q: "Chi è il più probabile che finisca la serata a dormire sul divano di un altro?", a: "Il proprietario di casa", b: "Il più molesto", c: "Chi ha bevuto troppo", d: "Quello che non ha le chiavi" },
-    { q: "Qual è la scusa più assurda mai sentita per paccare una serata?", a: "Ho sonno (alle 21:00)", b: "Devo lavare i capelli", c: "Mia madre non vuole", d: "Visualizzato e mai risposto" },
-    { q: "Qual è il cibo salvavita alle 4 del mattino dopo la discoteca?", a: "Kebab completo", b: "Cornetto alla Nutella", c: "Pizza fredda del giorno prima", d: "Pasta in bianco deprimente" },
-    { q: "Chi è il 're dei messaggi vocali' infiniti nel gruppo?", a: "Il logorroico", b: "Chi non ha voglia di scrivere", c: "Chi è in crisi esistenziale", d: "Il saggio del gruppo" },
-    { q: "Cosa si ordina quando si capisce che la serata deve degenerare?", a: "Tequila sale e limone", b: "Gin Tonic ignorante", c: "Sambuca ghiacciata", d: "Chupito a sorpresa" },
-    { q: "Chi sparisce sempre misteriosamente quando c'è da pagare il conto?", a: "Il finto tonto", b: "Chi va in bagno 'un attimo'", c: "L'esperto di Satispay", d: "Chi ha dimenticato il PIN" },
-    { q: "Qual è l'app più imbarazzante che potremmo trovare sul tuo telefono?", a: "Tinder (nascosta in una cartella)", b: "Un gioco per bambini piccoli", c: "La calcolatrice (usata troppo)", d: "L'app della banca a zero" },
-    { q: "Chi è quello che deve fotografare ogni momento per le storie di IG?", a: "L'influencer fallito", b: "Chi non si gode mai il momento", c: "Quello che fa foto mosse", d: "La ragazza estetica" },
-    { q: "In quale viaggio di gruppo finireste sicuramente arrestati?", a: "Amsterdam", b: "Ibiza", c: "Las Vegas", d: "Campeggio abusivo" },
+   { 
+        q: "Qual è la cosa che mi manda più in bestia tra queste?", 
+        a: "Chi mastica rumorosamente", b: "Il visualizzato senza risposta", c: "La gente che cammina lenta", d: "Chi arriva in ritardo" 
+    },
+    { 
+        q: "Se potessi scappare dall'Italia domani, dove mi trovereste?", 
+        a: "In una metropoli (tipo NY o Tokyo)", b: "Sperduto su un'isola tropicale", c: "In uno chalet in montagna", d: "In una capitale europea a bere birra" 
+    },
+    { 
+        q: "Qual è il mio 'guilty pleasure' musicale (quella che ascolto di nascosto)?", 
+        a: "Canzoni neomelodiche", b: "Sigle dei cartoni animati", c: "Pop commerciale anni 2000", d: "Trap imbarazzante" 
+    },
+    { 
+        q: "Cosa farei come prima cosa se vincessi 10 milioni alla lotteria?", 
+        a: "Scomparirei nel nulla", b: "Comprerei una casa gigante per le feste", c: "Viaggerei per tutto il mondo", d: "Licenziarmi/Mollare tutto con una scenata" 
+    },
+    { 
+        q: "Qual è stata la mia materia più odiata a scuola?", 
+        a: "Matematica/Fisica", b: "Storia/Filosofia", c: "Lingue straniere", d: "Italiano/Letteratura" 
+    },
+    { 
+        q: "Qual è il mio stile di 'approccio' quando mi piace qualcuno?", 
+        a: "Aspetto che sia l'altro a scrivermi", b: "Faccio il simpatico/la simpatica (e sbaglio tutto)", c: "Faccio finta di nulla (distaccato/a)", d: "Vado diretto al punto" 
+    },
+    { 
+        q: "Se fossi un animale, quale sarei secondo voi?", 
+        a: "Un leone (protagonista)", b: "Un gatto (faccio i fatti miei)", c: "Un cane (iperattivo e fedele)", d: "Un bradipo (lasciatemi dormire)" 
+    },
+    { 
+        q: "Qual è il mio social network preferito (dove perdo più tempo)?", 
+        a: "Instagram (le storie degli altri)", b: "TikTok (il loop infinito)", c: "WhatsApp (a spettegolare)", d: "Nessuno, lo uso solo per noia" 
+    },
+    { 
+        q: "Qual è la prima cosa che noto in una persona che mi piace?", 
+        a: "Il sorriso/i denti", b: "Gli occhi/lo sguardo", c: "Come è vestita", d: "Il modo in cui parla" 
+    },
+    { 
+        q: "Qual è l'abitudine che vorrei togliermi ma non ci riesco?", 
+        a: "Essere sempre in ritardo", b: "Mangiarsi le unghie/toccare i capelli", c: "Spendere soldi in cavolate", d: "Andare a dormire troppo tardi" 
+    },
 
     // --- 40 DOMANDE 18+ (IL SUCCO DEL GIOCO) ---
     { q: "Qual è il posto più 'rischioso' dove l'hai fatto?", a: "In macchina in centro", b: "In un parco pubblico", c: "In spiaggia/mare", d: "In ufficio/scuola" },
