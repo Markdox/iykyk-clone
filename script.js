@@ -11,7 +11,6 @@ const domandeQuiz = [
     { q: "Qual è l'app più imbarazzante che potremmo trovare sul tuo telefono?", a: "Tinder (nascosta in una cartella)", b: "Un gioco per bambini piccoli", c: "La calcolatrice (usata troppo)", d: "L'app della banca a zero" },
     { q: "Chi è quello che deve fotografare ogni momento per le storie di IG?", a: "L'influencer fallito", b: "Chi non si gode mai il momento", c: "Quello che fa foto mosse", d: "La ragazza estetica" },
     { q: "In quale viaggio di gruppo finireste sicuramente arrestati?", a: "Amsterdam", b: "Ibiza", c: "Las Vegas", d: "Campeggio abusivo" },
-    { q: "Chi è il primo a cedere e addormentarsi durante un film?", a: "Chi russa dopo 5 minuti", b: "Il commentatore seriale", c: "Chi guarda solo lo smartphone", d: "Il più stanco della settimana" },
 
     // --- 40 DOMANDE 18+ (IL SUCCO DEL GIOCO) ---
     { q: "Qual è il posto più 'rischioso' dove l'hai fatto?", a: "In macchina in centro", b: "In un parco pubblico", c: "In spiaggia/mare", d: "In ufficio/scuola" },
